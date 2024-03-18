@@ -1,0 +1,69 @@
+RESERVATION HOTEL DETAILS
+Room Type: VIP
+Number of Days: 1
+Number of Room: 1
+Start Date: 12/11/2024
+End Date: 13/11/2024
+Name: KRITCHANAT
+ID Card: 110040124243
+Email: kritchantweve@gmail.com
+Phone: 098787654352
+Total Service Cost: 1200 THB
+---------------------------------------------
+
+RESERVATION HOTEL DETAILS
+You have reservation a time: 18/03/2024 TIME: 01:27 PM
+Room Type: Normal
+Number of Days: 2
+Number of Room: 4
+Start Date: 10/05/2024
+End Date: 12/05/2024
+Name: WAVE
+ID Card: 31242536475
+Email: kregfvkjsdvk@gmail.com
+Phone: 9875643
+Total Service Cost: 5600 THB
+---------------------------------------------
+
+RESERVATION HOTEL DETAILS
+You have reservation a time: 18/03/2024 TIME: 01:28 PM
+Room Type: Normal
+Number of Days: 1
+Number of Room: 1
+Start Date: 1
+End Date: 1
+Name: 11
+ID Card: 1
+Email: 1
+Phone: 1
+Total Service Cost: 700 THB
+---------------------------------------------
+
+RESERVATION HOTEL DETAILS
+You have reservation a time: 18/03/2024 TIME: 01:29 PM
+Room Type: VIP
+Number of Days: 5
+Number of Room: 2
+Start Date: 10/06/2024
+End Date: 15/06/2024
+Name: WAVE
+ID Card: 123432543646
+Email: kewerkvk@gmail.com
+Phone: 0987653323
+Total Service Cost: 12000 THB
+---------------------------------------------
+
+RESERVATION HOTEL DETAILS
+You have reservation a time: 18/03/2024 TIME: 01:34 PM
+Room Type: Normal
+Number of Days: 10
+Number of Room: 2
+Start Date: 10/07/2024
+End Date: 20/07/2024
+Name: WAVE
+ID Card: 214325463574
+Email: lrgknijb@gmil.com
+Phone: 7856374
+Total Service Cost: 14000 THB
+---------------------------------------------
+

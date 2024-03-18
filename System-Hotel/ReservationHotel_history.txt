@@ -67,3 +67,45 @@ Phone: 7856374
 Total Service Cost: 14000 THB
 ---------------------------------------------
 
+RESERVATION HOTEL DETAILS
+You have reservation a time: 18/03/2024 TIME: 09:48 PM
+Room Type: VIP
+Number of Days: 1
+Number of Room: 1
+Start Date: 18/03/2024
+End Date: 19/03/2024
+Name: WAVE
+ID Card: 2134352463574
+Email: kmiwevmk@gmail.com
+Phone: 0987656723
+Total Service Cost: 1200 THB
+---------------------------------------------
+
+RESERVATION HOTEL DETAILS
+You have reservation a time: 18/03/2024 TIME: 09:52 PM
+Room Type: Normal
+Number of Days: 10
+Number of Room: 10
+Start Date: 12/04/2024
+End Date: 22/04/2024
+Name: WAVE
+ID Card: 312432543654
+Email: flkvmsdv@gmail.com
+Phone: 03924358
+Total Service Cost: 70000 THB
+---------------------------------------------
+
+RESERVATION HOTEL DETAILS
+You have reservation a time: 18/03/2024 TIME: 09:55 PM
+Room Type: Normal
+Number of Days: 2
+Number of Room: 4
+Start Date: ,5
+End Date: 12
+Name: WAVE
+ID Card: 12342542
+Email: fklmviw@gmail.com
+Phone: 3124352435
+Total Service Cost: 5600 THB
+---------------------------------------------
+

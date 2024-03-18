@@ -21,17 +21,16 @@ struct ReservationHotel {
     char end[12];
 };
 
-int calculateCost(int roomType, int NumRoom, int NumDays) {
-    if (roomType == 1)
+int calculateCost(int roomType, int NumRoom, int NumDays){
+    if (roomType == 1){
         return NumRoom * NumDays * NORMAL_RATE;
-    else if (roomType == 2)
+    } else if (roomType == 2){
         return NumRoom * NumDays * VIP_RATE;
-    else
+    } else 
         return 0;
 }
-
 void InputReservation(struct ReservationHotel *reservation) {
-    printf("ENTER ROOM TYPE (1: Normal, 2: VIP): ");
+    printf("ENTER ROOM TYPE (1: NORMAL / 2: VIP): ");
     scanf("%d", &reservation->roomType);
     printf("\n");
     printf("---------------------------------------------\n");
@@ -78,26 +77,29 @@ void InputReservation(struct ReservationHotel *reservation) {
 
 void FindAvailableRoom(struct ReservationHotel *reservations[], int numReservations) {
     int availableRooms[NUM_ROOM_NORMAL + NUM_ROOM_VIP] = {0};
+    int i;
 
-    for (int i = 0; i < numReservations; i++) {
-        if (reservations[i]->roomType == 1)
+    for (i = 0; i < numReservations; i++) {
+        if (reservations[i]->roomType == 1){
             availableRooms[reservations[i]->NumRoom - 1] = 1;
-        else if (reservations[i]->roomType == 2)
+
+        } else if (reservations[i]->roomType == 2){
             availableRooms[NUM_ROOM_NORMAL + reservations[i]->NumRoom - 1] = 1;
+        }
     }
 
-    printf("\nAvailable Rooms\n");
+    printf("\nAVAILABLE ROOMS!\n");
     printf("\n");
-    printf("Normal Rooms:\n");
-    for (int i = 0; i < NUM_ROOM_NORMAL; i++) {
+    printf("NORMAL ROOMS:\n");
+    for (i = 0; i < NUM_ROOM_NORMAL; i++) {
         if (!availableRooms[i])
-            printf("Room %d\n", i + 1);
+            printf("ROOM %d\n", i + 1);
     }
     printf("\n");
-    printf("VIP Rooms:\n");
-    for (int i = 0; i < NUM_ROOM_VIP; i++) {
+    printf("VIP ROOMS:\n");
+    for (i = 0; i < NUM_ROOM_VIP; i++) {
         if (!availableRooms[NUM_ROOM_NORMAL + i])
-            printf("Room %d\n", i + 1);
+            printf("ROOM %d\n", i + 1);
     }
 }
 
@@ -128,6 +130,9 @@ void ReservationDetail(struct ReservationHotel *reservation, int totalCost) {
     printf("Phone: %s\n", reservation->phone);
     printf("Total Service Cost: %d THB\n", totalCost);
     printf("---------------------------------------------\n");
+    printf("\n");
+    printf("\nTHANK YOU FOR USING OUR SERVICE\n");
+    printf("\n");
 }
 
 void SaveToFile(struct ReservationHotel *reservation, int totalCost) {
@@ -160,6 +165,7 @@ void SaveToFile(struct ReservationHotel *reservation, int totalCost) {
         fprintf(file, "Total Service Cost: %d THB\n", totalCost);
         fprintf(file, "---------------------------------------------\n\n");
         fclose(file);
+
     } else {
         printf("ERROR: Could not open file for saving reservation details.\n");
     }
@@ -168,41 +174,55 @@ void SaveToFile(struct ReservationHotel *reservation, int totalCost) {
 int main() {
     struct ReservationHotel *reservations[MAX_RESERVATIONS];
     int numReservations = 0;
-    int choice;
+    int choice, totalCost;
 
     do {
         printf("\n");
         printf("*-------------------------- RESERVATION HOTEL SYSTEM! -------------------------*\n");
         printf("\n");
-        printf("1. Make a reservation\n");
-        printf("2. Find available rooms\n");
-        printf("3. Exit\n");
-        printf("Enter your choice: ");
+        printf("1. MAKE A RESERVATION\n");
+        printf("2. FIND AVAILABLE ROOMS\n");
+        printf("3. EXIT\n");
+        printf("\nENTER YOUR CHOICE: ");
         scanf("%d", &choice);
+        printf("\n");
+        printf("---------------------------------------------\n");
+        printf("\n");
 
         switch (choice) {
             case 1:
                 if (numReservations < MAX_RESERVATIONS) {
                     reservations[numReservations] = malloc(sizeof(struct ReservationHotel));
+
                     if (reservations[numReservations] != NULL) {
                         InputReservation(reservations[numReservations]);
-                        int totalCost = calculateCost(reservations[numReservations]->roomType, reservations[numReservations]->NumRoom, reservations[numReservations]->NumDays);
+
+                        totalCost = calculateCost(reservations[numReservations]->roomType, 
+                        reservations[numReservations]->NumRoom, reservations[numReservations]->NumDays);
+
                         ReservationDetail(reservations[numReservations], totalCost);
+
                         SaveToFile(reservations[numReservations], totalCost);
+
                         numReservations++;
+
                     } else {
                         printf("Memory allocation failed. Unable to make a reservation.\n");
                     }
+
                 } else {
                     printf("Maximum number of reservations reached.\n");
                 }
                 break;
+
             case 2:
                 FindAvailableRoom(reservations, numReservations);
                 break;
+
             case 3:
                 printf("Exiting program.\n");
                 break;
+
             default:
                 printf("Invalid choice. Please try again.\n");
                 break;

@@ -41,8 +41,7 @@ int calculateCost(int tableType, int tableNumber, int hours, int minutes){
     int normalTableNumbers[NUM_NORMAL_TABLES] = {1, 2, 3, 4, 5, 6, 7, 8};
     int vipTableNumbers[NUM_VIP_TABLES] = {9, 10, 11, 12};
 
-    switch (tableType)
-    {
+    switch (tableType) {
     case 1:
         for (i = 0; i < NUM_NORMAL_TABLES; i++){
             if (tableNumber == normalTableNumbers[i]){
@@ -53,7 +52,6 @@ int calculateCost(int tableType, int tableNumber, int hours, int minutes){
             return 0;
         }
         break;
-
     case 2:
         for (i = 0; i < NUM_VIP_TABLES; i++){
             if (tableNumber == vipTableNumbers[i]){
@@ -64,7 +62,6 @@ int calculateCost(int tableType, int tableNumber, int hours, int minutes){
             return 0;
         }
         break;
-
     default:
         return 0;
     }
@@ -215,8 +212,8 @@ void showReservationHistory(){
 }
 
 void addPoints(const char *phone, int hours) {
-    int found = 0;
-    for (int i = 0; i < totalLoyaltyMembers; ++i){
+    int found = 0, i;
+    for (i = 0; i < totalLoyaltyMembers; ++i){
         if (strcmp(loyaltyPoints[i].name, phone) == 0){
             found = 1;
             loyaltyPoints[i].points += hours;        }

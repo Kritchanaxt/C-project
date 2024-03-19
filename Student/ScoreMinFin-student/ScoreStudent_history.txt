@@ -1,0 +1,5 @@
+Student 1 wave: 34.00 56.00 Pass
+Student 2 my: 23.00 15.60 Fail
+Student 3 diw: 56.00 43.40 Pass
+Student 4 win: 98.00 3.00 Pass
+Student 5 got: 56.00 42.00 Pass

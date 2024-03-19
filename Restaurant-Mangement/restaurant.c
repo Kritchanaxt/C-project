@@ -16,11 +16,11 @@ struct MenuItem {
 void addMenuItem(struct MenuItem *menu, int *numItems) {
     if (*numItems < MAX_MENU_ITEMS) {
         printf("Enter name of the menu item: ");
-        scanf(" %[^\n]", menu[*numItems].name); 
+        scanf(" %s", menu[*numItems].name); 
         printf("Enter price of the menu item: ");
         scanf("%d", &menu[*numItems].price);
         printf("Enter category of the menu item: ");
-        scanf(" %[^\n]", menu[*numItems].category); 
+        scanf(" %s", menu[*numItems].category); 
         (*numItems)++;
         printf("Menu item added successfully!\n");
     } else {
